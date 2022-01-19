@@ -1,7 +1,7 @@
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" />
-    <el-scrollbar wrap-class="scrollbar-wrapper">
+    <!-- <el-scrollbar wrap-class="scrollbar-wrapper"> -->
       <el-menu
         :default-active="getCurrentMenuId"
         :background-color="variables.menuBg"
@@ -15,7 +15,7 @@
       >
         <sidebar-item v-for="menu in getMenuList" :key="menu.menuId" :item="menu" :base-path="menu.formRouterName || ''" />
       </el-menu>
-    </el-scrollbar>
+    <!-- </el-scrollbar> -->
   </div>
 </template>
 
@@ -46,7 +46,7 @@ export default {
   methods: {
     selectMenu (index, path) {
       if (this.getCurrentMenuId === index) return;
-      this.$store.commit('user/setCurrentMenuId', index);
+      this.$store.commit('user/SET_CURRENT_MENU_ID', index);
     },
   }
 }

@@ -32,34 +32,10 @@ const mutations = {
   SET_MENU_LIST: (state, list) => {
     if (Array.isArray(list)) {
       if (setObjectToSessionStorage('menuList1', list)) state.menuList = treeDataTranslate(list, 'menuId', 'parentId')
-      // const columnId = (state.menuList[0] || {}).menuId
-      // if (setObjectToSessionStorage('currentColumnId', columnId)) state.currentColumnId = columnId
     }
   },
-  setCurrentMenuId: (state, menuId) => {
-    // let menuItem = null;
+  SET_CURRENT_MENU_ID: (state, menuId) => {
     if (setObjectToSessionStorage('currentMenuId', menuId)) state.currentMenuId = menuId;
-    // if (Array.isArray(state.tagList) && Array.isArray(state.menuList)) {
-    //   for (let i = 0; i < state.menuList.length; i++) {
-    //     menuItem = findMenuItem(state.menuList[i], menuId, 'menuId');
-    //     if (menuItem != null) {
-    //       // 添加新的tag
-    //       let tagItem = findItemFromList(state.tagList, menuId, 'menuId');
-    //       if (tagItem == null) {
-    //         state.tagList = [...state.tagList, menuItem];
-    //         setObjectToSessionStorage('tagList', state.tagList);
-    //       }
-    //       // 添加新缓存
-    //       if (Array.isArray(state.cachePages) && state.cachePages.indexOf(menuItem.formRouterName) === -1) {
-    //         if (menuItem.onlineFormId == null || menuItem.onlineFormId === '') {
-    //           state.cachePages = [...state.cachePages, menuItem.formRouterName];
-    //         }
-    //         setObjectToSessionStorage('cachePages', state.cachePages);
-    //       }
-    //       break;
-    //     }
-    //   }
-    // }
   },
 }
 

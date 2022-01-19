@@ -91,6 +91,32 @@ const users = {
       "updateUserId": 1440911410581213400
   },
   {
+    "createTime": "2021-09-23 00:00:00",
+    "createUserId": 1440911410581213400,
+    "deletedFlag": 1,
+    "formRouterName": "Menu1",
+    "menuId": 1392786950682842100,
+    "menuName": "kpi看板1",
+    "menuType": 1,
+    "parentId": 1392786950682841000,
+    "showOrder": 2,
+    "updateTime": "2021-09-23 00:00:00",
+    "updateUserId": 1440911410581213400
+  },
+  {
+    "createTime": "2021-09-23 00:00:00",
+    "createUserId": 1440911410581213400,
+    "deletedFlag": 1,
+    "formRouterName": "Menu2",
+    "menuId": 1392786950682843100,
+    "menuName": "kpi看板2",
+    "menuType": 1,
+    "parentId": 1392786950682841000,
+    "showOrder": 2,
+    "updateTime": "2021-09-23 00:00:00",
+    "updateUserId": 1440911410581213400
+  },
+  {
       "createTime": "2021-09-23 00:00:00",
       "createUserId": 1440911410581213400,
       "deletedFlag": 1,
