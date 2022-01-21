@@ -154,6 +154,8 @@ export function treeDataTranslate(data, id = 'id', pid = 'parentId') {
     temp[data[i][id]] = data[i]
   }
   for (let k = 0; k < data.length; k++) {
+    // temp[data[k][pid]]当前菜单的父级菜单
+    // 判断是否有parentId,是否是子菜单
     if (temp[data[k][pid]] && data[k][id] !== data[k][pid]) {
       if (!temp[data[k][pid]]['children']) {
         temp[data[k][pid]]['children'] = []
@@ -161,10 +163,13 @@ export function treeDataTranslate(data, id = 'id', pid = 'parentId') {
       if (!temp[data[k][pid]]['_level']) {
         temp[data[k][pid]]['_level'] = 1
       }
+      // 给当前菜单设置属性: '_level'、'_parent'
       data[k]['_level'] = temp[data[k][pid]]._level + 1
       data[k]['_parent'] = data[k][pid]
+      
       temp[data[k][pid]]['children'].push(data[k])
     } else {
+      // 顶层
       res.push(data[k])
     }
   }

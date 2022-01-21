@@ -52,11 +52,9 @@ export default {
         if (newValue && newValue.onlineFormId == null) {
         }
         if (newValue == null) {
-          if (this.$route.name !== 'welcome') { // TODO: 应该跳首页吧？
-            this.$router.replace({
-              name: 'welcome'
-            });
-          }
+          this.$router.replace({ // TODO: 应该跳首页吧？
+            name: 'Dashboard'
+          });
         } else {
           if (newValue.onlineFormId == null) {
             // 解决formRouterName为'loadVueApp'时跳到'/'的问题
